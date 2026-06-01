@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function MapsSection({ lang }: { lang: string }) {
   const isEn = lang === "en";
   const mapUrl =
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.8404742919865!2d21.264675576765136!3d43.96075403248414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4756c400bd934333%3A0x8fef4b3882912300!2z0JXRgtC90L4g0YDQtdGB0YLQvtGA0LDQvSDigJ7QmtC-0L3QsNC64oCc!5e1!3m2!1ssr!2srs!4v1779969135962!5m2!1ssr!2srs";
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.920761544066!2d21.26460721207793!3d43.9671913319452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4756c4050037b387%3A0x8cf50cdab21f4199!2z0JDQutCy0LAg0J_QsNGA0Log0IjQsNCz0L7QtNC40L3QsA!5e1!3m2!1ssr!2srs!4v1780314044364!5m2!1ssr!2srs";
 
   return (
     <section
@@ -27,7 +27,7 @@ export default function MapsSection({ lang }: { lang: string }) {
             {isEn ? "Visit Us" : "Posetite nas"}
           </span>
           <h2 className="mt-5 font-serif text-4xl font-light text-[#E8DCCF] leading-tight tracking-wide sm:text-5xl lg:text-6xl">
-            Cocetova 58, Jagodina
+            Čočetova 58, Jagodina
           </h2>
           <p className="mx-auto mt-5 max-w-2xl font-sans text-sm font-light leading-8 tracking-wide text-stone-300 sm:text-base">
             {isEn ? "Open every day from 9:00 to 00:00." : "Otvoreno svakog dana od 9:00 do 00:00."}

@@ -46,7 +46,7 @@ export default function Footer() {
             </a>
             <span className="hidden h-4 w-px bg-[#2D211C] sm:block" />
             <p className="cursor-default">
-              Cocetova 58, Jagodina, Srbija
+              Čočetova 58, Jagodina, Srbija
             </p>
           </div>
 

@@ -35,7 +35,7 @@ export default async function Rezervacije({ params }: RezervacijeProps) {
     >
       <section className="relative h-[60vh] w-full overflow-hidden bg-[#0A0705]">
         <Navbar />
-        
+
         <SlowZoom className="absolute inset-0 z-0">
           <Image
             src="/etnokonak.jpg"
@@ -50,7 +50,7 @@ export default async function Rezervacije({ params }: RezervacijeProps) {
         <div className="absolute inset-0 bg-[#0C0806]/65 z-10 mix-blend-multiply" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(176,122,79,0.18)_0%,rgba(10,7,5,0.78)_75%,rgba(5,3,2,0.92)_100%)] z-15" />
         <div className="absolute inset-0 bg-[inset_0_0_100px_rgba(0,0,0,0.85)] z-16 pointer-events-none" />
-        
+
         <EmberSparks />
 
         <div className="relative z-20 flex h-full flex-col items-center justify-center px-4 text-center">
@@ -76,24 +76,24 @@ export default async function Rezervacije({ params }: RezervacijeProps) {
           {/* Ordering Card */}
           <FadeInUp delay={0.2} className="group relative overflow-hidden border border-[#B07A4F]/20 bg-[#18110E]/80 p-8 shadow-2xl backdrop-blur-sm transition-all hover:border-[#B07A4F]/40 lg:p-12">
             <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#B07A4F]/5 blur-3xl transition-all group-hover:bg-[#B07A4F]/10" />
-            
+
             <h2 className="font-serif text-3xl font-light tracking-wide text-[#F4E7D8] lg:text-4xl">
               {isEn ? "Order Food" : "Poručite hranu"}
             </h2>
             <div className="my-6 h-px w-16 bg-[#B07A4F]" />
             <p className="font-sans text-base font-light leading-relaxed text-[#D6C5B5] lg:text-lg">
-              {isEn 
+              {isEn
                 ? "Order your favorite dishes quickly and easily by phone. Enjoy authentic flavors in the comfort of your home."
                 : "Naručite vaša omiljena jela brzo i jednostavno telefonom. Uživajte u autentičnim ukusima u udobnosti vašeg doma."
               }
             </p>
-            
+
             <div className="mt-10">
               <a
                 href="tel:+38135244555"
                 className="inline-flex items-center gap-4 font-sans text-lg font-semibold tracking-wider text-[#E8DCCF] transition-colors hover:text-[#B07A4F]"
               >
-                <svg viewBox="0 0 24 24" className="h-6 w-6 fill-[#E8DCCF] transition-colors group-hover:fill-[#B07A4F]" xmlns="http://www.w3.org/2000/svg"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1zM19 12h2c0-4.8-3.9-9-8.7-9v2c3.7 0 6.7 3.1 6.7 7z"/></svg>
+                <svg viewBox="0 0 24 24" className="h-6 w-6 fill-[#E8DCCF] transition-colors group-hover:fill-[#B07A4F]" xmlns="http://www.w3.org/2000/svg"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1zM19 12h2c0-4.8-3.9-9-8.7-9v2c3.7 0 6.7 3.1 6.7 7z" /></svg>
                 {isEn ? "Ordering" : "Poručivanje"}: +381 35 244 555
               </a>
             </div>
@@ -102,7 +102,7 @@ export default async function Rezervacije({ params }: RezervacijeProps) {
           {/* Reservation Card */}
           <FadeInUp delay={0.4} className="group relative overflow-hidden border border-[#B07A4F]/20 bg-[#18110E]/80 p-8 shadow-2xl backdrop-blur-sm transition-all hover:border-[#B07A4F]/40 lg:p-12">
             <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#B07A4F]/5 blur-3xl transition-all group-hover:bg-[#B07A4F]/10" />
-            
+
             <h2 className="font-serif text-3xl font-light tracking-wide text-[#F4E7D8] lg:text-4xl">
               {isEn ? "Book a Table" : "Rezervišite sto"}
             </h2>
@@ -113,13 +113,13 @@ export default async function Rezervacije({ params }: RezervacijeProps) {
                 : "Rezervišite svoj sto unapred i obezbedite mesto bez čekanja. Idealno za poslovne ručkove ili porodične proslave."
               }
             </p>
-            
+
             <div className="mt-10 flex flex-col gap-6">
               <a
                 href="tel:+38135244555"
                 className="inline-flex items-center gap-4 font-sans text-lg font-semibold tracking-wider text-[#E8DCCF] transition-colors hover:text-[#B07A4F]"
               >
-                <svg viewBox="0 0 24 24" className="h-6 w-6 fill-[#E8DCCF] transition-colors group-hover:fill-[#B07A4F]" xmlns="http://www.w3.org/2000/svg"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1zM19 12h2c0-4.8-3.9-9-8.7-9v2c3.7 0 6.7 3.1 6.7 7z"/></svg>
+                <svg viewBox="0 0 24 24" className="h-6 w-6 fill-[#E8DCCF] transition-colors group-hover:fill-[#B07A4F]" xmlns="http://www.w3.org/2000/svg"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1zM19 12h2c0-4.8-3.9-9-8.7-9v2c3.7 0 6.7 3.1 6.7 7z" /></svg>
                 {isEn ? "Call us" : "Pozovite nas"}: +381 35 244 555
               </a>
             </div>
@@ -145,15 +145,15 @@ export default async function Rezervacije({ params }: RezervacijeProps) {
               {isEn ? "Where to find us" : "Gde se nalazimo"}
             </h3>
             <p className="mt-6 font-serif text-2xl font-light text-[#E8DCCF]">
-              Cocetova 58, Jagodina, Srbija
+              Čočetova 58, Jagodina, Srbija
             </p>
             <p className="mt-2 font-sans text-sm font-light text-[#A99380]">
               {isEn ? "In the heart of Jagodina, near the city park." : "U srcu Jagodine, nadomak gradskog parka."}
             </p>
             <div className="mt-8">
-              <a 
-                href="https://maps.app.goo.gl/YQMsJgTQnNRLK41m8" 
-                target="_blank" 
+              <a
+                href="https://maps.app.goo.gl/YQMsJgTQnNRLK41m8"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex border-b border-[#B07A4F] pb-1 font-sans text-xs font-semibold uppercase tracking-widest text-[#B07A4F] transition-all hover:text-[#E8DCCF] hover:border-[#E8DCCF]"
               >
