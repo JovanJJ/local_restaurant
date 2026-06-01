@@ -15,12 +15,12 @@ export async function generateMetadata({ params }: RezervacijeProps) {
     sr: {
       title: "Kontakt i rezervacije",
       description:
-        "Rezervišite sto ili poručite hranu iz restorana Etno Konak u Jagodini. Pronađite telefon, radno vreme i adresu.",
+        "Rezervišite sto ili poručite hranu iz restorana Etno Restoran u Jagodini. Pronađite telefon, radno vreme i adresu.",
     },
     en: {
       title: "Contact and Reservations",
       description:
-        "Book a table or order food from Etno Konak in Jagodina. Find the phone number, opening hours and address.",
+        "Book a table or order food from Etno Restoran in Jagodina. Find the phone number, opening hours and address.",
     },
   });
 }

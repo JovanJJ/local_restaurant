@@ -16,7 +16,7 @@ export default function Loading() {
         {/* Brand Text */}
         <div className="flex flex-col items-center gap-2">
           <p className="font-serif text-2xl font-light italic tracking-wider text-[#B07A4F] animate-pulse">
-            Etno Konak
+            Etno Restoran
           </p>
           <div className="h-[1px] w-12 bg-gradient-to-r from-transparent via-[#B07A4F]/40 to-transparent" />
           <p className="font-sans text-[9px] font-semibold uppercase tracking-[0.24em] text-[#A99380]">

@@ -18,12 +18,12 @@ export async function generateMetadata({ params }: HomeProps) {
     sr: {
       title: "Početna",
       description:
-        "Etno Konak u Jagodini spaja domaću kuhinju, tradicionalna pića, prijatan ambijent i rezervacije za svaki povod.",
+        "Etno Restoran u Jagodini spaja domaću kuhinju, tradicionalna pića, prijatan ambijent i rezervacije za svaki povod.",
     },
     en: {
       title: "Home",
       description:
-        "Etno Konak in Jagodina brings together homemade Serbian cuisine, traditional drinks, a warm atmosphere and reservations for every occasion.",
+        "Etno Restoran in Jagodina brings together homemade Serbian cuisine, traditional drinks, a warm atmosphere and reservations for every occasion.",
     },
   });
 }

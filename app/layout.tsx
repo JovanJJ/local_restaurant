@@ -9,31 +9,31 @@ const siteUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:30
 export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: {
-    default: "Etno Konak",
-    template: "%s | Etno Konak",
+    default: "Etno Restoran",
+    template: "%s | Etno Restoran",
   },
   description:
-    "Etno Konak is an authentic Serbian restaurant in Jagodina with traditional food, local drinks and warm hospitality.",
-  applicationName: "Etno Konak",
+    "Etno Restoran is an authentic Serbian restaurant in Jagodina with traditional food, local drinks and warm hospitality.",
+  applicationName: "Etno Restoran",
   keywords: [
-    "Etno Konak",
+    "Etno Restoran",
     "Serbian restaurant",
     "Jagodina restaurant",
     "traditional Serbian food",
     "restaurant reservations",
   ],
-  authors: [{ name: "Etno Konak" }],
-  creator: "Etno Konak",
-  publisher: "Etno Konak",
+  authors: [{ name: "Etno Restoran" }],
+  creator: "Etno Restoran",
+  publisher: "Etno Restoran",
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Etno Konak",
+    title: "Etno Restoran",
     description:
       "Authentic Serbian restaurant in Jagodina with traditional dishes, rakija, desserts and reservations.",
-    siteName: "Etno Konak",
+    siteName: "Etno Restoran",
     type: "website",
     locale: "sr_RS",
     images: [
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
         url: "/hero-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Etno Konak",
+        alt: "Etno Restoran",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Etno Konak",
+    title: "Etno Restoran",
     description:
       "Authentic Serbian restaurant in Jagodina with traditional dishes, rakija, desserts and reservations.",
     images: ["/hero-image.jpg"],

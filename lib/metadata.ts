@@ -13,8 +13,6 @@ type RouteCopy = {
   };
 };
 
-const siteName = "Etno Konak";
-
 export function normalizeLang(lang: string): SupportedLang {
   return lang === "en" ? "en" : "sr";
 }
@@ -25,6 +23,7 @@ export function buildLocalizedMetadata(
   copy: RouteCopy
 ): Metadata {
   const locale = normalizeLang(lang);
+  const siteName = locale === "en" ? "Ethno Restaurant" : "Etno Restoran";
   const localizedCopy = copy[locale];
   const normalizedPath = path ? `/${path.replace(/^\/+/, "")}` : "";
 

@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Etno Konak",
+    absolute: "Etno Restoran",
   },
   description:
-    "Etno Konak is an authentic Serbian restaurant in Jagodina with traditional food, local drinks and warm hospitality.",
+    "Etno Restoran is an authentic Serbian restaurant in Jagodina with traditional food, local drinks and warm hospitality.",
 };
 
 export default function RootPage() {
