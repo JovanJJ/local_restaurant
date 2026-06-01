@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { SlowZoom } from "@/app/components/MotionWrappers";
 
 export default function SignatureDishes({ lang }: { lang: string }) {
   const isEn = lang === "en";
@@ -23,17 +24,22 @@ export default function SignatureDishes({ lang }: { lang: string }) {
             transition={{ duration: 1.9, ease: [0.16, 1, 0.3, 1] }}
             className="w-full relative aspect-[16/9] md:aspect-[16/8] lg:h-[48%] lg:aspect-auto rounded-xl overflow-hidden shadow-2xl border border-white/5"
           >
-            <Image
-              src="/cevapi.png"
-              alt="Cevapi"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute bottom-6 left-6 text-[#E8DCCF]">
-              <span className="font-sans text-[10px] uppercase tracking-widest text-[#B07A4F] font-semibold">
+            <SlowZoom className="w-full h-full">
+              <Image
+                src="/cevapi.png"
+                alt="Cevapi"
+                fill
+                className="object-cover"
+              />
+            </SlowZoom>
+            {/* Elegant dark-warm linear gradient overlay under the text for legibility on light texture images */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#18110E]/85 via-[#18110E]/30 to-transparent pointer-events-none z-10" />
+
+            <div className="absolute bottom-6 left-6 text-[#E8DCCF] z-20">
+              <span className="font-sans text-[10px] uppercase tracking-widest text-[#B07A4F] font-semibold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
                 {isEn ? "MAIN DISH" : "GLAVNO JELO"}
               </span>
-              <h3 className="font-serif text-2xl font-light tracking-wide">
+              <h3 className="font-serif text-2xl font-light tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
                 {isEn ? "Homemade Cevapi" : "Domaći Ćevapi na Somunu"}
               </h3>
             </div>
@@ -55,7 +61,9 @@ export default function SignatureDishes({ lang }: { lang: string }) {
               transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
               className="absolute right-[4%] top-0 w-[58%] aspect-[4/3] lg:h-[95%] lg:aspect-auto rounded-xl shadow-2xl overflow-hidden"
             >
-              <Image src="/baklave.png" alt="Baklava" fill className="object-cover" />
+              <SlowZoom className="w-full h-full">
+                <Image src="/baklave.png" alt="Baklava" fill className="object-cover" />
+              </SlowZoom>
             </motion.div>
           </div>
         </div>
@@ -88,13 +96,19 @@ export default function SignatureDishes({ lang }: { lang: string }) {
             <p>
               {isEn
                 ? "Hand-prepared grilled cevapi, served with homemade flatbread, fresh onions, roasted peppers and creamy kajmak."
-                : "Ručno pripremljeni ćevapi sa roštilja, posluženi uz domaći somun, svež luk, pečenu papriku i kremasti kajmak."
+                : "Ručno pripremljeni ćevapi sa roštilja, posluženi uz domaći somun, svež luk, pečenu papriku i kremasti kajmak. "
               }
             </p>
             <p>
               {isEn
                 ? "With a carefully selected Vranac, which perfectly accompanies the rich flavors of grilled dishes."
                 : "Uz pažljivo odabrani Vranac, koji savršeno prati bogate ukuse jela sa roštilja."
+              }
+            </p>
+            <p>
+              {isEn
+                ? "For the perfect end to the meal, we serve traditional baklava prepared according to a homemade recipe."
+                : "Za savršen završetak obroka, poslužujemo tradicionalnu baklavu pripremljenu po domaćoj recepturi."
               }
             </p>
           </div>
