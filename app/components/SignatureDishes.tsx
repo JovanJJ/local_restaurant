@@ -120,7 +120,7 @@ export default function SignatureDishes({ lang }: { lang: string }) {
               {isEn ? "Full menu with drink" : "Kompletan meni sa pićem"}
             </span>
             <span className="font-serif text-4xl font-light text-[#B07A4F] tracking-widest mt-1">
-              2000 din
+              2750 din
             </span>
           </div>
         </motion.div>
