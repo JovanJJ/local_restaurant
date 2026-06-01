@@ -1,19 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Cormorant_Garamond, Montserrat } from "next/font/google";
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-montserrat",
-});
 
 const footerLinks = [
   { label: "Home", href: "/" },
@@ -25,7 +11,7 @@ const footerLinks = [
 export default function Footer() {
   return (
     <footer
-      className={`${cormorant.variable} ${montserrat.variable} relative overflow-hidden bg-[#0A0705] px-5 py-20 text-[#E8DCCF] sm:px-8 lg:px-16`}
+      className="relative overflow-hidden bg-[#0A0705] px-5 py-20 text-[#E8DCCF] sm:px-8 lg:px-16"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(176,122,79,0.14),transparent_38%),linear-gradient(180deg,rgba(31,23,19,0.76)_0%,rgba(10,7,5,1)_100%)] pointer-events-none" />
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#B07A4F]/40 to-transparent" />

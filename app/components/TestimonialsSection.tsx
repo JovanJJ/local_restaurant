@@ -1,20 +1,6 @@
 "use client";
 
-import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import { motion } from "framer-motion";
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-montserrat",
-});
 
 export default function TestimonialsSection({ lang }: { lang: string }) {
   const isEn = lang === "en";
@@ -40,7 +26,7 @@ export default function TestimonialsSection({ lang }: { lang: string }) {
 
   return (
     <section
-      className={`${cormorant.variable} ${montserrat.variable} relative w-full overflow-hidden bg-[#0A0705] px-5 py-24 text-[#E8DCCF] sm:px-8 lg:px-16 lg:py-36`}
+      className="relative w-full overflow-hidden bg-[#0A0705] px-5 py-24 text-[#E8DCCF] sm:px-8 lg:px-16 lg:py-36"
       aria-label="Guest testimonials"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(176,122,79,0.06),transparent_40%)] pointer-events-none" />

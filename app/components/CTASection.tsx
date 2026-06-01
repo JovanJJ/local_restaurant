@@ -1,28 +1,13 @@
 "use client";
 
-import { Cormorant_Garamond, Montserrat } from "next/font/google";
-import Navbar from "@/app/components/Navbar";
 import { motion } from "framer-motion";
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-montserrat",
-});
 
 export default function CTASection({ lang }: { lang: string }) {
   const isEn = lang === "en";
 
   return (
     <section
-      className={`${cormorant.variable} ${montserrat.variable} relative w-full overflow-hidden bg-[#0A0705] px-5 py-20 text-[#E8DCCF] sm:px-8 lg:px-16 lg:py-28`}
+      className="relative w-full overflow-hidden bg-[#0A0705] px-5 py-20 text-[#E8DCCF] sm:px-8 lg:px-16 lg:py-28"
       aria-label="Reservation call to action"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(176,122,79,0.22),transparent_42%),linear-gradient(180deg,rgba(31,23,19,0.96)_0%,rgba(10,7,5,0.98)_100%)] pointer-events-none" />

@@ -1,27 +1,13 @@
 "use client";
 
-import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import { motion } from "framer-motion";
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-montserrat",
-});
 
 export default function ChiefStory({ lang }: { lang: string }) {
   const isEn = lang === "en";
 
   return (
     <section
-      className={`${cormorant.variable} ${montserrat.variable} relative w-full overflow-hidden bg-[#0A0705] px-5 py-24 text-[#E8DCCF] sm:px-8 lg:px-16 lg:py-36`}
+      className="relative w-full overflow-hidden bg-[#0A0705] px-5 py-24 text-[#E8DCCF] sm:px-8 lg:px-16 lg:py-36"
       aria-label="Chef's story"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(176,122,79,0.08),transparent_45%)] pointer-events-none" />

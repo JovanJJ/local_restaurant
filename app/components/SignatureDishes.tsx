@@ -1,28 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import { motion } from "framer-motion";
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-montserrat",
-});
 
 export default function SignatureDishes({ lang }: { lang: string }) {
   const isEn = lang === "en";
 
   return (
     <section 
-      className={`${cormorant.variable} ${montserrat.variable} w-full min-h-screen lg:h-screen lg:min-h-[750px] flex flex-col lg:flex-row bg-[#0A0705] overflow-hidden relative`}
+      className="w-full min-h-screen lg:h-screen lg:min-h-[750px] flex flex-col lg:flex-row bg-[#0A0705] overflow-hidden relative"
       aria-label="Signature Dishes Showcase"
     >
       {/* Food Images Collage */}

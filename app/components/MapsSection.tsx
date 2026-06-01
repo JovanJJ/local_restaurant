@@ -1,20 +1,6 @@
 "use client";
 
-import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import { motion } from "framer-motion";
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-montserrat",
-});
 
 export default function MapsSection({ lang }: { lang: string }) {
   const isEn = lang === "en";
@@ -23,7 +9,7 @@ export default function MapsSection({ lang }: { lang: string }) {
 
   return (
     <section
-      className={`${cormorant.variable} ${montserrat.variable} relative w-full overflow-hidden bg-[#0A0705] px-5 py-20 text-[#E8DCCF] sm:px-8 lg:px-16 lg:py-28`}
+      className="relative w-full overflow-hidden bg-[#0A0705] px-5 py-20 text-[#E8DCCF] sm:px-8 lg:px-16 lg:py-28"
       aria-label="Restaurant location map"
     >
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,7,5,0.34)_0%,rgba(31,23,19,0)_36%,rgba(10,7,5,0.44)_100%)] pointer-events-none" />
