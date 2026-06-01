@@ -22,14 +22,14 @@ export default function Hero({ lang }: { lang: string }) {
 
 
             <div className="absolute inset-0 w-full h-full select-none pointer-events-none overflow-hidden z-0">
-                <SlowZoom className="w-full h-full">
+                <SlowZoom className="relative w-full h-full">
                     <Image
                         src="/hero-image.jpg"
                         alt="Hero"
                         fill
                         priority
-                        quality={78}
-                        sizes="100vw"
+                        quality={85}
+                        sizes="(max-width: 768px) 140vw, 100vw"
                         className="object-cover select-none pointer-events-none"
                     />
                 </SlowZoom>
