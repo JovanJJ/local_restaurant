@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import type { MenuItemWithHierarchy, LocalizedString } from "@/lib/action";
 import { PageTransition, GentleFloat, StaggeredFadeIn } from "@/app/components/MotionWrappers";

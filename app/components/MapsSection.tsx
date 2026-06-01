@@ -9,10 +9,10 @@ export default function MapsSection({ lang }: { lang: string }) {
 
   return (
     <section
-      className="relative w-full overflow-hidden bg-[#0A0705] px-5 py-20 text-[#E8DCCF] sm:px-8 lg:px-16 lg:py-28"
+      className="relative w-full overflow-hidden bg-[#18110E] px-5 py-20 text-[#E8DCCF] sm:px-8 lg:px-16 lg:py-28"
       aria-label="Restaurant location map"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,7,5,0.34)_0%,rgba(31,23,19,0)_36%,rgba(10,7,5,0.44)_100%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(24,17,14,0.34)_0%,rgba(31,23,19,0)_36%,rgba(24,17,14,0.44)_100%)] pointer-events-none" />
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#B07A4F]/35 to-transparent" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center gap-9">

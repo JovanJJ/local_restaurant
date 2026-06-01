@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "./components/Footer";
+import RoutePrefetcher from "./components/RoutePrefetcher";
 import { cormorant, montserrat } from "./fonts";
 
 const siteUrl = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000");
@@ -62,7 +63,8 @@ export default async function RootLayout({
     <html
       className="h-full antialiased"
     >
-      <body className={`${cormorant.variable} ${montserrat.variable} min-h-full flex flex-col bg-[#0A0705]`}>
+      <body className={`${cormorant.variable} ${montserrat.variable} min-h-full flex flex-col bg-[#18110E]`}>
+        <RoutePrefetcher />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

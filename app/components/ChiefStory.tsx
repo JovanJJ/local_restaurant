@@ -7,7 +7,7 @@ export default function ChiefStory({ lang }: { lang: string }) {
 
   return (
     <section
-      className="relative w-full overflow-hidden bg-[#0A0705] px-5 py-24 text-[#E8DCCF] sm:px-8 lg:px-16 lg:py-36"
+      className="relative w-full overflow-hidden bg-[#18110E] px-5 py-24 text-[#E8DCCF] sm:px-8 lg:px-16 lg:py-36"
       aria-label="Chef's story"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(176,122,79,0.08),transparent_45%)] pointer-events-none" />
@@ -38,9 +38,9 @@ export default function ChiefStory({ lang }: { lang: string }) {
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2 }}
             >
-              {isEn 
-                ? "Every dish in Etno Konak is a tribute to our roots. Our head chef combines old family recipes with modern culinary techniques, creating flavors that bridge generations."
-                : "Svako jelo u Etno Konaku je omaž našim korenima. Naš glavni kuvar kombinuje stare porodične recepte sa modernim kulinarskim tehnikama, kreirajući ukuse koji spajaju generacije."
+              {isEn
+                ? "Every dish in our restaurant is a tribute to our roots. Our head chef combines old family recipes with modern culinary techniques, creating flavors that bridge generations."
+                : "Svako jelo kod nas je omaž našim korenima. Naš glavni kuvar kombinuje stare porodične recepte sa modernim kulinarskim tehnikama, kreirajući ukuse koji spajaju generacije."
               }
             </motion.p>
             <motion.p
@@ -55,7 +55,7 @@ export default function ChiefStory({ lang }: { lang: string }) {
               }
             </motion.p>
           </div>
-          
+
           <motion.div
             initial={{ opacity: 0, scaleX: 0 }}
             whileInView={{ opacity: 1, scaleX: 1 }}
@@ -65,7 +65,7 @@ export default function ChiefStory({ lang }: { lang: string }) {
           >
             <div className="h-px w-12 bg-[#B07A4F]/40" />
             <span className="font-serif text-2xl italic text-[#B07A4F]">
-              Jovan J., {isEn ? "Founder" : "Osnivač"}
+              JJ., {isEn ? "Founder" : "Osnivač"}
             </span>
           </motion.div>
         </div>
@@ -85,16 +85,16 @@ export default function ChiefStory({ lang }: { lang: string }) {
               alt="Our Chef"
               className="h-full w-full object-cover transition-transform duration-1000 hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0705]/80 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#18110E]/80 via-transparent to-transparent" />
           </div>
-          
+
           {/* Floating Luxury Accent */}
           <div className="absolute -bottom-8 -right-8 hidden h-32 w-32 items-center justify-center rounded-full bg-[#B07A4F] text-center shadow-2xl sm:flex">
-             <div className="p-4">
-                <p className="font-serif text-sm font-medium leading-tight text-[#E8DCCF]">
-                  Est.<br />1999
-                </p>
-             </div>
+            <div className="p-4">
+              <p className="font-serif text-sm font-medium leading-tight text-[#E8DCCF]">
+                Est.<br />1999
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>

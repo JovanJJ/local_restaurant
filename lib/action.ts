@@ -1,5 +1,6 @@
 import "server-only";
 import { Pool } from "pg";
+import { unstable_cache } from "next/cache";
 
 declare global {
   var restaurantDbPool: Pool | undefined;
@@ -556,7 +557,7 @@ export async function initializeMenuDatabase() {
   await pool.query(menuTranslationSql);
 }
 
-export async function getMenuNavigation(): Promise<MenuNavigationCategory[]> {
+export const getMenuNavigation = unstable_cache(async (): Promise<MenuNavigationCategory[]> => {
   const { rows } = await pool.query<{
     category_id: string;
     category_name: string;
@@ -623,9 +624,9 @@ export async function getMenuNavigation(): Promise<MenuNavigationCategory[]> {
   }
 
   return Array.from(categories.values());
-}
+}, ["menu-navigation"], { revalidate: 3600, tags: ["menu"] });
 
-export async function getMenuItems(): Promise<MenuItemWithHierarchy[]> {
+export const getMenuItems = unstable_cache(async (): Promise<MenuItemWithHierarchy[]> => {
   const { rows } = await pool.query<{
     id: string;
     subcategory_id: string;
@@ -701,4 +702,4 @@ export async function getMenuItems(): Promise<MenuItemWithHierarchy[]> {
     subcategoryName: { sr: row.subcategory_name, en: row.subcategory_name_en || row.subcategory_name },
     subcategorySlug: row.subcategory_slug,
   }));
-}
+}, ["menu-items"], { revalidate: 3600, tags: ["menu"] });

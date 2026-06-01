@@ -32,7 +32,7 @@ export default async function Home({ params }: HomeProps) {
   const { lang } = await params;
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#0A0705]">
+    <div className="flex flex-col min-h-screen bg-[#18110E]">
       <Hero lang={lang} />
       <SignatureDishes lang={lang} />
       <VisualGallery lang={lang} />

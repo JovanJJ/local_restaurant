@@ -7,7 +7,7 @@ export default function VisualGallery({ lang }: { lang: string }) {
 
   return (
     <section
-      className="relative w-full overflow-hidden bg-[#0A0705] px-5 py-24 text-[#E8DCCF] sm:px-8 lg:px-16 lg:py-36"
+      className="relative w-full overflow-hidden bg-[#18110E] px-5 py-24 text-[#E8DCCF] sm:px-8 lg:px-16 lg:py-36"
       aria-label="Gallery of restaurant visuals"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(176,122,79,0.04),transparent_50%)] pointer-events-none" />
@@ -20,7 +20,7 @@ export default function VisualGallery({ lang }: { lang: string }) {
             viewport={{ once: true }}
             className="font-sans text-[10px] font-semibold uppercase tracking-[0.32em] text-[#B07A4F] sm:text-xs"
           >
-            {isEn ? "Moments from the Kitchen" : "Momenti Iz Kuhinje"}
+            {isEn ? "Moments from the Kitchen" : "Momenti i Atmosfera"}
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ export default function VisualGallery({ lang }: { lang: string }) {
                 alt="Gallery"
                 className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110 group-hover:rotate-1"
               />
-              <div className="absolute inset-0 bg-[#0A0705]/20 transition-opacity duration-500 group-hover:opacity-0" />
+              <div className="absolute inset-0 bg-[#18110E]/20 transition-opacity duration-500 group-hover:opacity-0" />
             </motion.div>
           ))}
         </div>

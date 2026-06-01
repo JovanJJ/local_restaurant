@@ -1,56 +1,36 @@
 import { getMenuItems, getMenuNavigation } from "@/lib/action";
-import MenuSidebar from "./components/MenuSidebar";
 import MenuHero from "./components/MenuHero";
-import FilteredItems from "./components/FilteredItems";
-import { buildLocalizedMetadata, normalizeLang } from "@/lib/metadata";
+import MenuContent from "./components/MenuContent";
+import { buildLocalizedMetadata } from "@/lib/metadata";
+import { Suspense } from "react";
 
 type MeniProps = {
   params: Promise<{ lang: string }>;
-  searchParams: Promise<{ category?: string }>;
 };
 
-export async function generateMetadata({ params, searchParams }: MeniProps) {
-  const [{ lang }, resolvedParams, categories] = await Promise.all([
-    params,
-    searchParams,
-    getMenuNavigation(),
-  ]);
-  const locale = normalizeLang(lang);
-  const selectedSubcategory = categories
-    .flatMap((category) => category.subcategories)
-    .find((subcategory) => subcategory.slug === resolvedParams.category);
-  const selectedName = selectedSubcategory?.name[locale];
+export async function generateMetadata({ params }: MeniProps) {
+  const { lang } = await params;
 
   return buildLocalizedMetadata(lang, "meni", {
     sr: {
-      title: selectedName ? `Meni - ${selectedName}` : "Meni",
+      title: "Meni",
       description:
         "Pregledajte meni restorana Etno Konak: predjela, čorbe, roštilj, jela od mesa, vina, rakije, koktele i domaće deserte.",
     },
     en: {
-      title: selectedName ? `Menu - ${selectedName}` : "Menu",
+      title: "Menu",
       description:
         "Browse the Etno Konak menu: appetizers, soups, grill, meat dishes, wines, spirits, cocktails and homemade desserts.",
     },
   });
 }
 
-export default async function Meni({ params, searchParams }: MeniProps) {
+export default async function Meni({ params }: MeniProps) {
   const { lang } = await params;
-  const resolvedParams = await searchParams;
   const [categories, menuItems] = await Promise.all([
     getMenuNavigation(),
     getMenuItems(),
   ]);
-
-  // Determine selected subcategory
-  const allSubcategories = categories.flatMap(c => c.subcategories);
-  const selectedSlug = resolvedParams.category || allSubcategories[0]?.slug;
-  
-  const currentSubcategory = allSubcategories.find(s => s.slug === selectedSlug);
-  const filteredItems = menuItems.filter(
-    (item) => item.subcategorySlug === selectedSlug
-  );
 
   return (
     <main
@@ -59,19 +39,21 @@ export default async function Meni({ params, searchParams }: MeniProps) {
       <MenuHero lang={lang} />
 
       <div className="relative mx-auto flex w-full max-w-7xl flex-col gap-12 px-6 py-20 lg:flex-row lg:items-start lg:px-12">
-        <MenuSidebar 
-          categories={categories} 
-          selectedSlug={selectedSlug}
-          lang={lang} 
-        />
-
-        <section className="flex-1 lg:pl-8">
-          <FilteredItems 
-            items={filteredItems}
-            subcategoryName={currentSubcategory?.name || ""}
+        <Suspense
+          fallback={
+            <div className="flex min-h-[360px] flex-1 items-center justify-center">
+              <div className="h-px w-24 overflow-hidden bg-[#2D211C]">
+                <div className="h-full w-1/2 animate-pulse bg-[#B07A4F]" />
+              </div>
+            </div>
+          }
+        >
+          <MenuContent
+            categories={categories}
+            menuItems={menuItems}
             lang={lang}
           />
-        </section>
+        </Suspense>
       </div>
     </main>
   );

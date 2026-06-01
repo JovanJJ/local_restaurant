@@ -47,6 +47,7 @@ export default function MenuSidebar({ categories, selectedSlug, lang }: MenuSide
                       <Link
                         href={`/${lang}/meni?category=${subcategory.slug}`}
                         scroll={false}
+                        prefetch={true}
                         className={`group flex items-center justify-between gap-4 py-2 font-sans text-sm transition-all duration-300 ${
                           isActive 
                             ? "text-[#F4E7D8] translate-x-1" 

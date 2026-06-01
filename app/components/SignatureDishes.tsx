@@ -7,19 +7,20 @@ export default function SignatureDishes({ lang }: { lang: string }) {
   const isEn = lang === "en";
 
   return (
-    <section 
-      className="w-full min-h-screen lg:h-screen lg:min-h-[750px] flex flex-col lg:flex-row bg-[#0A0705] overflow-hidden relative"
+    <section
+      className="w-full min-h-screen lg:h-screen lg:min-h-[750px] flex flex-col lg:flex-row bg-[#18110E] overflow-hidden relative"
       aria-label="Signature Dishes Showcase"
     >
       {/* Food Images Collage */}
-      <div className="w-full lg:w-[60%] h-[550px] sm:h-[650px] lg:h-full bg-[#18110E] p-6 sm:p-12 lg:p-16 flex flex-col justify-center items-center relative overflow-hidden border-b lg:border-b-0 lg:border-r border-[#2D211C]/60 z-10">
+      <div className="w-full lg:w-[60%] h-[550px] sm:h-[650px] lg:h-full bg-[#221813] p-6 sm:p-12 lg:p-16 flex flex-col justify-center items-center relative overflow-hidden border-b lg:border-b-0 lg:border-r border-[#3A2A23]/60 z-10">
         <div className="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] bg-[#B07A4F]/5 rounded-full blur-[100px] pointer-events-none" />
-        
+
         <div className="w-full max-w-2xl h-full flex flex-col justify-center gap-6 sm:gap-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 1.9, ease: [0.16, 1, 0.3, 1] }}
             className="w-full relative aspect-[16/9] md:aspect-[16/8] lg:h-[48%] lg:aspect-auto rounded-xl overflow-hidden shadow-2xl border border-white/5"
           >
             <Image
@@ -51,6 +52,7 @@ export default function SignatureDishes({ lang }: { lang: string }) {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
+              transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
               className="absolute right-[4%] top-0 w-[58%] aspect-[4/3] lg:h-[95%] lg:aspect-auto rounded-xl shadow-2xl overflow-hidden"
             >
               <Image src="/baklave.png" alt="Baklava" fill className="object-cover" />
@@ -60,15 +62,16 @@ export default function SignatureDishes({ lang }: { lang: string }) {
       </div>
 
       {/* Info Container */}
-      <div className="w-full lg:w-[40%] flex items-center justify-center p-6 sm:p-12 lg:p-16 bg-[#0A0705] text-[#E8DCCF] z-20">
-        <motion.div 
+      <div className="w-full lg:w-[40%] flex items-center justify-center p-6 sm:p-12 lg:p-16 bg-[#18110E] text-[#E8DCCF] z-20">
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 2, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
           className="max-w-md w-full flex flex-col justify-center text-center items-center py-14 px-10 rounded-2xl bg-[#1A1310] border border-[#2D211C] shadow-2xl relative overflow-hidden"
         >
           <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#B07A4F] to-transparent shadow-[0_1px_10px_#B07A4F]" />
-          
+
           <span className="font-sans text-[#B07A4F] uppercase tracking-[0.3em] text-[10px] font-semibold mb-4">
             {isEn ? "RECOMMENDED MENU" : "PREPORUČENI MENI"}
           </span>
@@ -83,7 +86,7 @@ export default function SignatureDishes({ lang }: { lang: string }) {
 
           <div className="font-sans text-[#E8DCCF] text-sm leading-[2] font-light space-y-6 tracking-wide max-w-[340px]">
             <p>
-              {isEn 
+              {isEn
                 ? "Hand-prepared grilled cevapi, served with homemade flatbread, fresh onions, roasted peppers and creamy kajmak."
                 : "Ručno pripremljeni ćevapi sa roštilja, posluženi uz domaći somun, svež luk, pečenu papriku i kremasti kajmak."
               }
@@ -103,7 +106,7 @@ export default function SignatureDishes({ lang }: { lang: string }) {
               {isEn ? "Full menu with drink" : "Kompletan meni sa pićem"}
             </span>
             <span className="font-serif text-4xl font-light text-[#B07A4F] tracking-widest mt-1">
-              32€
+              2000 din
             </span>
           </div>
         </motion.div>
