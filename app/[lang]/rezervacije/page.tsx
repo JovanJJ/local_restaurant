@@ -94,7 +94,7 @@ export default async function Rezervacije({ params }: RezervacijeProps) {
                 className="inline-flex items-center gap-4 font-sans text-lg font-semibold tracking-wider text-[#E8DCCF] transition-colors hover:text-[#B07A4F]"
               >
                 <svg viewBox="0 0 24 24" className="h-6 w-6 fill-[#E8DCCF] transition-colors group-hover:fill-[#B07A4F]" xmlns="http://www.w3.org/2000/svg"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1zM19 12h2c0-4.8-3.9-9-8.7-9v2c3.7 0 6.7 3.1 6.7 7z" /></svg>
-                {isEn ? "Ordering" : "Poručivanje"}: +381 35 244 555
+                {isEn ? "Ordering" : "Poručivanje"}: +381 35 111 222
               </a>
             </div>
           </FadeInUp>
@@ -120,7 +120,7 @@ export default async function Rezervacije({ params }: RezervacijeProps) {
                 className="inline-flex items-center gap-4 font-sans text-lg font-semibold tracking-wider text-[#E8DCCF] transition-colors hover:text-[#B07A4F]"
               >
                 <svg viewBox="0 0 24 24" className="h-6 w-6 fill-[#E8DCCF] transition-colors group-hover:fill-[#B07A4F]" xmlns="http://www.w3.org/2000/svg"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1zM19 12h2c0-4.8-3.9-9-8.7-9v2c3.7 0 6.7 3.1 6.7 7z" /></svg>
-                {isEn ? "Call us" : "Pozovite nas"}: +381 35 244 555
+                {isEn ? "Call us" : "Pozovite nas"}: +381 35 111 222
               </a>
             </div>
           </FadeInUp>
